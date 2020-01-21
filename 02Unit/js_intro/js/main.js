@@ -12,7 +12,7 @@ var user_name = 'Izzy';
 var userName = 'Mario';
 
 // Number data type: 
-var year = 2019;
+var year = 2020;
 var score1 = 90.25;
 var score2 = 91.0125;
 
@@ -35,6 +35,9 @@ var averageScore;
 averageScore = (score1 + score2)/2; // Note the order of precedence; note that the result of division is a floating-point number
 console.log('The average score for\n ' + userName + ',\n user ID ' + 
 userId + ',\n in ' + year + ',\n was ' + averageScore); // Note the escape \n symbol for the new line
+
+console.log('\tAverage score\tUser name\tUser id\t\tYear\n' + 
+             '\t' + averageScore + '\t' + userName + '\t\t' + userId +  '\t\t' + year);
 
 // Increment operators
 year++;
