@@ -19,7 +19,7 @@ typeof largeNumber;
 // "number"
 
 
-var name = "Mickey Mouse";
+var name = "Mickey Mouse";  // Single or double quotes are OK.
 typeof name;
 // "string"
 var emptyStr = "";
@@ -33,7 +33,7 @@ flag = false;
 typeof flag
 // "boolean"
 
-/* OPERATORS: */
+/* OPERATORS and EXPRESSIONS: */
 
 var quantity = 44;
 var price = 20;
