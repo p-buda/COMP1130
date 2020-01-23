@@ -26,13 +26,10 @@ Data type is dynamically determined.
 var userId = 123; // userId points to a number data type
 userId = '123';   // now, userId points to a string data type
 
-/* Let's use what we know about variables and data types, 
-and learn something new about operators and expressions */
-
 // Note that we can assign other things than literals to variables.
 // For example, we can assign another variable, or an expression.
 var averageScore;
-averageScore = (score1 + score2)/2; // Note the order of precedence; note that the result of division is a floating-point number
+averageScore = (score1 + score2)/2; // Note the order of precedence;
 console.log('The average score for\n ' + userName + ',\n user ID ' + 
 userId + ',\n in ' + year + ',\n was ' + averageScore); // Note the escape \n symbol for the new line
 
@@ -61,11 +58,11 @@ console.log('Your full name is ' + userName);
 // This program converts miles to kilometers. (1 mile = approx. 1.609 km)
 var miles;
 var km;
-var conversion_factor = 1.609;
 
 miles = prompt('Enter a value in miles: ', 100);
-miles = parseInt(miles);  // convert the input value, that is always a string, to a number
-km = miles * conversion_factor;
+miles = parseFloat(miles);  // convert the input value, that is always a string, to a number
+km = miles * 1.609;
+km = parseInt(km);
 window.alert(miles + ' miles equals approx. ' + km + ' kilometers.');
 
 
