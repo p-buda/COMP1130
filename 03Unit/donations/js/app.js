@@ -17,7 +17,7 @@ donation = parseFloat(donation);
 if(isNaN(donation) || donation < 0) {
    document.write("Please enter a valid number."); 
 } else {
-   if(donation > 100) {
+   if(donation >= 100) {
       document.write("Thank you for your <b>generous</b> donation of " + donation + " dollars!"); 
    } else if (donation > 0) {
       document.write("Thank you for your donation of " + donation + " dollars!");
