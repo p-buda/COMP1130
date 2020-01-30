@@ -28,7 +28,7 @@ if(isNaN(donation) || donation < 0) {
 
 // Send a thank you card if the donation is more than $0.0
 var sendThankYouCard = false;
-if(donation > 0) {
+if(donation >= 100) {
    sendThankYouCard = true;
 }
 
