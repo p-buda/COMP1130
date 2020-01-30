@@ -13,12 +13,14 @@ var list = [];  // empty array
 
 do {
     price = prompt('Enter the price or type \'q\' to quit.');
-    if(price > 0) {
+    if (price !== 'q' && price !== 'Q') {
         price = parseFloat(price);
-        total += price;
-        list.push(price);  // the push() method adds items to the array
-    } else if (price !== 'q' && price !== 'Q') {
-        alert('Enter a valid postive price or type \'q\' to quit.');
+        if(price > 0) {
+            total += price;
+            list.push(price);  // the push() method adds items to the array
+        } else {
+            alert('Enter a valid postive price or type \'q\' to quit.');
+        }
     }
 } while (price !== 'q' && price !== 'Q');
 
