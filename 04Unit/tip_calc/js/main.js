@@ -13,22 +13,35 @@ var calcTip = function() {
     var price = 0;
 
     do {
-    price = prompt('Enter the price', 100);
-    price = parseFloat(price);
-    } while(isNaN(price) || price <= 0);
+        price = prompt('Enter the price', 100);
+        price = parseFloat(price);
+        
+        if(isNaN(price) || price < 0) {
+            alert('The price must be a valid positive number.');
+        }
+    } while(isNaN(price) || price < 0);
     
-    tip = 0;
+    var tip = 0;
+    var invalid;
     do {
-    tip = prompt('Enter the tip %', 20);
-    tip = parseFloat(tip);
-    } while(isNaN(tip) || tip < 0 || tip > 100);
+        tip = prompt('Enter the tip %', 20);
+        tip = parseFloat(tip);
+
+        if(isNaN(tip) || tip < 0 || tip > 100) {
+            alert('The tip must be a valid number from 0-100.');
+            invalid = true;
+        } else {
+            invalid = false;
+        }
+
+    } while(invalid);
 
     // divide the tip by 100 to represent a number
     tip = tip/100;
 
     tip = tip * price;
 
-    alert('The tip is ' + tip + ' dollars.');
+    document.write('The tip is ' + tip + ' dollars.');
 }
 
 // call the function
@@ -44,7 +57,7 @@ the whole program has access to this variable and can by accident modify its val
 */ 
 // Example: remove the "var" keyword from the "tip" variable declaration statement.
 // Now, call this variable outside of its scope:
-console.log(tip); // It should work unless you use the strict mode.
+// console.log(tip); // It should work unless you use the strict mode.
 // That is not a safe practice. Use local variables when possible.
 
 // You can add 'use strict'; at the top of your code file, so JS will tag omission 
