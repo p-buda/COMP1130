@@ -24,7 +24,7 @@ var convertToKm = function() {
 
 
 /* Function expression with parameters */
-var miles;
+// var miles;
 // miles = prompt('Enter a value in miles: ', 100);
 
 var convertToKm2 = function(m) {
