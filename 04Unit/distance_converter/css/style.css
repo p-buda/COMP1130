@@ -1,0 +1,22 @@
+/* Type selectors */
+body {
+    margin: 1em auto;             /* Note the syntax of the CSS rules: */
+    width: 80%;                   /* property-name: property-value(s); */
+    background-color: white;
+    padding: 1%;
+    border: 1px solid green;
+}
+
+h1, h2 {
+    color: purple;
+}
+/* Id selectors */
+#copyrights {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Class selectors */
+.first_p {
+    font-weight: bold;
+}
