@@ -44,19 +44,3 @@ function calcTip() {
 // call the function
 calcTip();
 
-/* Demonstrating global and local variables scope */
-// Trying to call the local-scope variable outside of its scope
-// console.log(price);
-
-/* If you forget the "var" keyword in the local scope, like in a function, 
-the variable will be declared as global. That can cause issues later because 
-the whole program has access to this variable and can by accident modify its value.
-*/ 
-// Example: remove the "var" keyword from the "tip" variable declaration statement.
-// Now, call this variable outside of its scope:
-// console.log(tip); // It should work unless you use the strict mode.
-// That is not a safe practice. Use local variables when possible.
-
-// You can add 'use strict'; at the top of your code file, so JS will tag omission 
-// of the "var" as an error.
-
