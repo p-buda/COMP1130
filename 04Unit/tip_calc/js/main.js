@@ -2,13 +2,13 @@
     main.js - calculating the tip amount
     Author: SCC
     Created: 09-02-2019
-    Edited: 09-16-2019
+    Edited: 02-05-2020
     Notes:
 */
 
 'use strict';
 
-var calcTip = function() {
+function calcTip() {
 
     var price = 0;
     var tipPercent = 0;
