@@ -11,37 +11,34 @@
 var calcTip = function() {
 
     var price = 0;
-
-    do {
-        price = prompt('Enter the price', 100);
-        price = parseFloat(price);
-        
-        if(isNaN(price) || price < 0) {
-            alert('The price must be a valid positive number.');
-        }
-    } while(isNaN(price) || price < 0);
-    
+    var tipPercent = 0;
     var tip = 0;
     var invalid;
-    do {
-        tip = prompt('Enter the tip %', 20);
-        tip = parseFloat(tip);
 
-        if(isNaN(tip) || tip < 0 || tip > 100) {
-            alert('The tip must be a valid number from 0-100.');
+    do {
+        price = prompt("Enter the price", 100);
+        price = parseFloat(price);
+
+        if(isNaN(price) || price <= 0) {
+            alert("The price must be a valid positive number.");
+        } 
+    } while(isNaN(price) || price <= 0)
+        
+    do {
+        tipPercent = prompt("Enter tip %", 20);
+        tipPercent = parseFloat(tipPercent);
+
+        if(isNaN(tipPercent) || tipPercent < 0 || tipPercent > 100) {
+            alert("The tip % must be a valid number 0-100.");
             invalid = true;
         } else {
             invalid = false;
         }
 
-    } while(invalid);
+    } while(invalid)
 
-    // divide the tip by 100 to represent a number
-    tip = tip/100;
-
-    tip = tip * price;
-
-    document.write('The tip is ' + tip + ' dollars.');
+    tip = price * (tipPercent / 100);
+    document.write("The tip amount is $" + tip);
 }
 
 // call the function
