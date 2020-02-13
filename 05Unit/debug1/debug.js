@@ -1,11 +1,11 @@
-var number = prompt("Think about a number between 1-10. What is it?";
+var userGuess = prompt("I am thinking about a number between 1-5. What is it?";
 
-var guess = Math.Floor(Math.random() * 10 + 1); // returns a random number from 1-10.
+var number = Math.floor(Math.random() * 5 + 1); // returns a random number from 1-5.
 
- // Check if the computer guessed the number.
-if(parseInt(number) = guest) {
-   document.write("My guess was a bit off. You typed " + number + " and I said " + guess + "...");
+ // Check if you guessed the number.
+if(parseInt(userGuess) = number) {
+   document.write("Your guess was a bit off. You typed " + userGuesst + " and I thought of " + number + "...");
 } else {
-   document.write("I guessed your number! You typed " + number + " and I said " + guess + "!");
+   document.write("You guessed my number! You typed " + userGuesst + " and I thought of " + number + "!");
 }
 
