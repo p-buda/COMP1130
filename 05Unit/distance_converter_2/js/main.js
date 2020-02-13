@@ -13,6 +13,10 @@ var $ = function(id) {
     return document.getElementById(id);
 };
 
+var getKms = function(mi) {
+    return mi * 1.609;
+};
+
 // Function that processes user input
 var processInput = function() {
     /* Miles */
@@ -22,12 +26,12 @@ var processInput = function() {
     if(isNaN(miles) || miles < 0) {
         alert('Miles must be a positive number or 0.');
     } else {
-        var km = miles * 1.609;
+        // var km = miles * 1.609;
         // var kmBox = document.getElementById('km');
         var kmBox = $('km'); // The same as above line but with the helper function.
-        kmBox.value = km.toFixed(1);
+        kmBox.value = getKms(miles).toFixed(1);
     }
-}
+};
 
 // Function that clears the textboxes
 var clearInput = function() {
