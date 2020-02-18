@@ -19,6 +19,8 @@ var processInput = function() {
     I want the city to start with a capital letter and the rest of the letters to be lowercase.
     */
     var city = $('city').value;
+    var price = parseFloat($('price').value);
+
     // Some tracing here: DEBUG: console.log(city.substr(0,1));
     var cityFirstLetter = city.substr(0,1);
     cityFirstLetter = cityFirstLetter.toUpperCase();
@@ -30,6 +32,24 @@ var processInput = function() {
     // DEBUG: console.log(city);
     // Reasign the cleaned up city value back to the city text box.
     $('city').value = city;
+
+    // Price processing
+    if(isNaN(price) || price <= 0) {
+        alert('Price must be a positive number.');
+    } else {
+        var treshold = price * .1;
+        console.log(treshold);
+        treshold = treshold.toFixed(3);
+        treshold = parseFloat(treshold);
+        console.log(treshold);
+        if(treshold === 5.595) {
+            alert('You receive a lower rate shipping.');
+        } else if(treshold > 5.595) {
+            alert('You get free shipping.');
+        } else {
+            alert('Your shipping is standard.');
+        }
+    }
 };
 
 window.onload = function() {
