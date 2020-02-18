@@ -29,3 +29,10 @@ label {
 input {
     margin-bottom: 1em;
 }
+
+div {
+    display: none;
+}
+div.open {
+    display: block;
+}

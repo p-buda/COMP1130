@@ -21,15 +21,20 @@ var processInput = function() {
     var city = $('city').value;
     var price = parseFloat($('price').value);
 
-    // Some tracing here: DEBUG: console.log(city.substr(0,1));
+    // Some tracing here: 
+    // DEBUG: 
+    console.log(city.substr(0,1));
     var cityFirstLetter = city.substr(0,1);
     cityFirstLetter = cityFirstLetter.toUpperCase();
-    // DEBUG: console.log(city.substr(1,city.length));
+    // DEBUG: 
+    console.log(city.substr(1,city.length));
     city = city.substr(1,city.length);
-    // DEBUG: console.log(city.toLowerCase());
+    // DEBUG: 
+    console.log(city.toLowerCase());
     city = city.toLowerCase();
     city = cityFirstLetter + city;
-    // DEBUG: console.log(city);
+    // DEBUG: 
+    console.log(city);
     // Reasign the cleaned up city value back to the city text box.
     $('city').value = city;
 
@@ -43,7 +48,7 @@ var processInput = function() {
         treshold = parseFloat(treshold);
         console.log(treshold);
         if(treshold === 5.595) {
-            alert('You receive a lower rate shipping.');
+            alert('You receive a low rate shipping.');
         } else if(treshold > 5.595) {
             alert('You get free shipping.');
         } else {
@@ -52,8 +57,24 @@ var processInput = function() {
     }
 };
 
+// toggleView is based on Murach "JavaScript/Query" 3rd Edition.
+var toggleView = function() {
+    var h3 = this;  // "In an event, "this" refers to the element that received the event." (w3schools)
+    var div = h3.nextElementSibling; 
+    // toggle div visibility by adding or removing a class
+    if (div.hasAttribute("class")) { 
+        div.removeAttribute("class");
+    } else { 
+        div.setAttribute("class", "open"); 
+    }
+};
+
 window.onload = function() {
     $('process').onclick = processInput;
+    // get the h2 tags
+    var h3Elements = document.getElementsByTagName("h3");
+    // Attach event to the first one:
+    h3Elements[0].onclick = toggleView;
 };
 
 
