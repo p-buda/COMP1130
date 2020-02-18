@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Comments:
+    index.html - the main page of my app
+    Author: SCC
+    Created: 09-30-2019
+    Edited: 10-02-2019
+    Notes:
+    -->
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- External JavaScript -->
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Trip Registration Form</h1>
+    </header>
+    <main>
+        <form name="reg_form" id="reg_form" action="http://example.org" method="POST">
+            <p>
+                <label for="">Email:</label>
+                <input type="email" id="email" name="email"><span>*</span>
+            </p>
+            <p>
+                <label for="dest">Destination: </label>
+                <select id="dest" name="dest">
+                    <option value="">Select destination</option>
+                    <option value="moon">Moon</option>
+                    <option value="mars">Mars</option>
+                    <option value="europa">Europa</option>
+                </select>
+                <span>*</span>
+            </p>
+            <p>
+                Payment type: <span id="pmt_err">*</span>
+            </p>
+
+            <input type="radio" name="pay_type" id="card" value="card"><label for="card">Card</label><br>
+            <input type="radio" name="pay_type" id="check" value="check"><label for="check">Check</label><br>
+            
+            <p>
+                Do you understand that it may be a one-way trip?
+                <input type="checkbox" name="agreement" id="agreement" value="confirmed">
+                <label for="agreement">I understand.</label>
+                <span id="agr_err">*</span>
+            </p>
+            <p>   
+                <input type="button" id="submit_destination" value="Submit Your Destination">
+                <input type="button" id="reset_form" value="Reset Form">
+            </p>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>
