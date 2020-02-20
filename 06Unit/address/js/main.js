@@ -58,6 +58,7 @@ var processInput = function() {
 };
 
 // toggleView is based on Murach "JavaScript/jQuery" 3rd Edition.
+// The Element interface methods examples
 var toggleView = function() {
     var h3 = this;  // "In an event, "this" refers to the element that received the event." (w3schools)
     var div = h3.nextElementSibling; 
@@ -72,7 +73,7 @@ var toggleView = function() {
 window.onload = function() {
     $('process').onclick = processInput;
     // get the h2 tags
-    var h3Elements = document.getElementsByTagName("h3");
+    var h3Elements = document.getElementsByTagName("h3"); // Document interface method
     // Attach event to the first one:
     h3Elements[0].onclick = toggleView;
 };

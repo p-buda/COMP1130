@@ -23,7 +23,7 @@
         <form name="reg_form" id="reg_form" action="http://example.org" method="POST">
             <p>
                 <label for="">Email:</label>
-                <input type="email" id="email" name="email"><span>*</span>
+                <input type="email" id="email" name="user_email"><span>*</span>
             </p>
             <p>
                 <label for="dest">Destination: </label>
@@ -40,7 +40,7 @@
             </p>
 
             <input type="radio" name="pay_type" id="card" value="card"><label for="card">Card</label><br>
-            <input type="radio" name="pay_type" id="check" value="check"><label for="check">Check</label><br>
+            <input type="radio" name="pay_type" id="paypal" value="paypal"><label for="paypal">Paypal</label><br>
             
             <p>
                 Do you understand that it may be a one-way trip?
@@ -49,8 +49,8 @@
                 <span id="agr_err">*</span>
             </p>
             <p>   
-                <input type="button" id="submit_destination" value="Submit Your Destination">
                 <input type="button" id="reset_form" value="Reset Form">
+                <input type="button" id="submit_destination" value="Submit Form">
             </p>
         </form>
     </main>
