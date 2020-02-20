@@ -57,7 +57,7 @@ var processInput = function() {
     }
 };
 
-// toggleView is based on Murach "JavaScript/Query" 3rd Edition.
+// toggleView is based on Murach "JavaScript/jQuery" 3rd Edition.
 var toggleView = function() {
     var h3 = this;  // "In an event, "this" refers to the element that received the event." (w3schools)
     var div = h3.nextElementSibling; 
