@@ -107,7 +107,7 @@ window.onload = function() {
     $("email").onchange = clearError;
     $("dest").onchange = clearError;
     $("card").onclick = showCardPayment;
-    $("check").onclick = hideCardPayment;
+    $("paypal").onclick = hideCardPayment;
     $("email").focus();
 
     // Image preloading as part of the window load event.
