@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Comments:
+    index.html - the main page of my app
+    Author: SCC
+    Created: 09-30-2019
+    Edited: 09-30-2019
+    Notes:
+    -->
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- External JavaScript -->
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Trip Registration Form</h1>
+    </header>
+    <main>
+        <form id="reg_form" name="reg_form" action="https://example.org/" method="POST">
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><span>*</span>
+            </p>
+            <p>
+            <label for="dest">Destination:</label>
+                <!-- <input type="text" id="dest" name="dest"><span>*</span><br> -->
+                <select name="dest" id="dest">
+                    <option value="">Select destination</option>
+                    <option value="moon">Moon</option>
+                    <option value="mars">Mars</option>
+                    <option value="europa">Europa</option>
+                </select><span>*</span>
+            </p>
+            <div>
+                <img id="image_choice" src="" alt="">
+            </div>
+            <ul id="image_list">
+                <li><a href="./img/220px-Moon.jpg" title="Image of the Moon"></a></li>
+                <li><a href="./img/220px-Mars.jpg" title="Image of planet Mars"></a></li>
+                <li><a href="./img/220px-Europa.jpg" title="Image of moon Europa"></a></li>
+            </ul>
+            <p>
+                Payment type:<span id="pmt_err">*</span>
+            </p>
+
+                <input type="radio" name="pay_type" id="card" value="card"><label for="card">Card</label><br>
+                <div id="card_payment_form"></div>
+                <input type="radio" name="pay_type" id="paypal" value="paypal"><label for="paypal">Paypal</label>
+            
+            <p>
+                Do you understand that it may be a one-way trip?
+                <input type="checkbox" id="agreement" name="agreement" value="confirmed">
+                <label for="agreement">I understand.</label>
+                <span id="agr_error">*</span>
+            </p>
+            <!-- <input type="submit" id="submit_destination" value="Submit your destination"><br> -->
+            <p>
+                <input type="submit" id="submit_destination" value="Submit your destination">
+                <input type="button" id="reset_form" value="Reset form"> 
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p>Time left to submit the form: <span id="timer">60</span></p>
+    </footer>
+
+</body>
+</html>
