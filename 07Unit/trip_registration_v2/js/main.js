@@ -57,9 +57,8 @@ var processInput = function(myFormEvent) {
         $("agr_error").firstChild.nodeValue = "*"; 
     }
 
-    if(isValid === false) {
-        // $("reg_form").submit();  // Submit the form only if the values are non-empty.
-        myFormEvent.preventDefault();
+    if(isValid === true) {
+        $("reg_form").submit();  // Submit the form only if the values are non-empty.
     }
 
 };
@@ -73,9 +72,6 @@ var clearInput = function() {
     $("pmt_err").firstChild.nodeValue = "*";
     $("agr_error").firstChild.nodeValue = "*";
     $("email").focus();
-    var imageChoice = $("image_choice");
-    imageChoice.src = "";
-    imageChoice.alt = "";
     $("timer").firstChild.nodeValue = "60";
 };
 
@@ -84,49 +80,11 @@ var clearError = function() {
     this.nextElementSibling.firstChild.nodeValue = "*";
 }
 
-// Image display handler
-var showImage = function(imgObj) {
-    var imageChoice = $("image_choice");
-    imageChoice.src = imgObj.src;
-    imageChoice.alt = imgObj.alt;
-}
-
 window.onload = function() {
     $("submit_destination").onclick = processInput;
     // $("reset_form").onclick = clearInput;
     $("email").onchange = clearError;
     $("email").focus();
-
-    // Image preloading as part of the window load event.
-    var imageList = $("image_list");
-    var imageObjectsLinks = imageList.getElementsByTagName("a");
-    var imageObject;
-    var cachedImagesArray = [];
-    // Loop through the list of images and add them to an array
-    for(var i = 0; i < imageObjectsLinks.length; i++) {
-        imageObject = new Image();
-        imageObject.src = imageObjectsLinks[i].getAttribute("href");
-        imageObject.alt = imageObjectsLinks[i].getAttribute("title");
-        cachedImagesArray.push(imageObject);
-    }
-
-    $("dest").onchange = function() {
-        if(this.value === "moon") {
-            showImage(cachedImagesArray[0]);
-        }
-        if(this.value === "mars") {
-            showImage(cachedImagesArray[1]);
-        }
-        if(this.value === "europa") {
-            showImage(cachedImagesArray[2]);
-        }
-        if(this.value === "") {
-            var imageChoice = $("image_choice");
-            imageChoice.src = "";
-            imageChoice.alt = "";
-        }
-    };
-
 
     // Timer that displays the seconds past and that will reset the page after certain amount of time.
     var seconds_left = 60;
