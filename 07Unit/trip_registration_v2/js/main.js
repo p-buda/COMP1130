@@ -72,7 +72,6 @@ var clearInput = function() {
     $("dest").nextElementSibling.firstChild.nodeValue = "*";
     $("pmt_err").firstChild.nodeValue = "*";
     $("agr_error").firstChild.nodeValue = "*";
-    $("card_payment_form").innerHTML = "";
     $("email").focus();
     var imageChoice = $("image_choice");
     imageChoice.src = "";
@@ -85,15 +84,6 @@ var clearError = function() {
     this.nextElementSibling.firstChild.nodeValue = "*";
 }
 
-var showCardPayment = function() {
-    $("card_payment_form").innerHTML = "<br>Card Number: <input type=\"text\">" + 
-                                       " Exp. Date <input type=\"text\"><br><br>"; 
-}
-
-var hideCardPayment = function() {
-    $("card_payment_form").innerHTML = "";
-};
-
 // Image display handler
 var showImage = function(imgObj) {
     var imageChoice = $("image_choice");
@@ -105,9 +95,6 @@ window.onload = function() {
     $("submit_destination").onclick = processInput;
     // $("reset_form").onclick = clearInput;
     $("email").onchange = clearError;
-    $("dest").onchange = clearError;
-    $("card").onclick = showCardPayment;
-    $("paypal").onclick = hideCardPayment;
     $("email").focus();
 
     // Image preloading as part of the window load event.
