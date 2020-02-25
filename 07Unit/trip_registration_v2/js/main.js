@@ -83,7 +83,7 @@ var clearError = function() {
 window.onload = function() {
     $("submit_destination").onclick = processInput;
     // $("reset_form").onclick = clearInput;
-    $("email").onchange = clearError;
+    $("email").oninput = clearError;
     $("email").focus();
 
     // Timer that displays the seconds past and that will reset the page after certain amount of time.
