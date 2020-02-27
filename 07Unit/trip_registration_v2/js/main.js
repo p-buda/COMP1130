@@ -13,7 +13,7 @@ var $ = function(id) {
 };
 
 // Function that processes user input
-var processInput = function(myFormEvent) {
+var processInput = function() {
     // Flag variable
     var isValid = true;
 
