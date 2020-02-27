@@ -16,8 +16,8 @@
 <body>
 <h1>Sign up for a tutoring session</h1>
 <form id="tutoring_signup" name="tutoring_signup" action="https://example.org/" method="POST">
-    <p><label for="username">Student Name: </label><input type="text" id="username" name="user_name"></p>
-    <p><label for="email">Email: </label><input type="email" id="email" name="user_email" placeholder="email@example.edu"></p>
+    <p><label for="username">Student Name: </label><input type="text" id="username" name="user_name"><span> *</span></p>
+    <p><label for="email">Email: </label><input type="text" id="email" name="user_email" placeholder="email@example.edu"></p>
     <p><label for="session_date">Preferred session date:</label><input type="date" id="session_date" name="start_date"></p>
     <p>
         <label for="subject">Choose your subject:</label>
@@ -29,10 +29,12 @@
         </select>
     </p>
     <p>
-        <input type="button" id="submit_session" value="Sign up">
+        <input type="submit" id="submit_session" value="Sign up">
         <input type="button" id="reset_form" value="Reset form">
-        <input type="button" id="display_tutors" value="Display tutors"> 
+        <input type="button" id="display_tutors" value="Display tutors">
+        <input type="button" id="display_best" value="Show highly rated">
     </p>
+    <div id="highly_rated"></div>
     <table id="tutors_table"></table>
 </form>
 </body>
