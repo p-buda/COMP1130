@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Comments:
+    index.html - the main page of my app
+    Author: SCC
+    Created: 2-26-2020
+    Edited: 2-26-2020
+    Notes:
+    -->
+    <meta charset="UTF-8">
+    <title>Groceries</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js"></script>
+</head>
+<body>
+<h1>Groceries</h1>
+
+<a href="./images/bread.jpg" title="Bread, price $3.50"><img src="./images/bread_thumb.jpg" alt=""></a>
+<a href="./images/broccoli.jpg" title="Broccoli, price $2.00"><img src="./images/broccoli_thumb.jpg" alt=""></a>
+<a href="./images/carrots.jpg" title="Carrots, price $2.75"><img src="./images/carrots_thumb.jpg" alt=""></a>
+
+<p id="image_caption">
+    Broccoli, price $2.00
+</p>
+<p>
+    <img id="large_image" src="./images/broccoli.jpg" alt="Broccoli, price $2.00">
+</p>
+
+<p><label for="item">Grocery Item: </label><input type="text" id="item"></p>
+<p><label for="price">Price: </label><input type="text" id="price"></p>
+    
+<p>
+    <input type="button" id="add_grocery" value="Add grocery">
+    <input type="button" id="display_groceries" value="Display groceries">
+</p>
+    <table id="grocery_table"></table>
+</body>
+</html>
