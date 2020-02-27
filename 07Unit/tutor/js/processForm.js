@@ -25,7 +25,7 @@ var displayTutors = function() {
 var displayBest = function() {
     var name = tutors[0];
     var bestRating = ratings[0];
-    for(var c = 0; c < ratings.length; c++) {
+    for(var c = 1; c < ratings.length; c++) {
         if(ratings[c] > bestRating) {
             bestRating = ratings[c];
             name = tutors[c];

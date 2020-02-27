@@ -16,7 +16,7 @@ var $ = function(id) {
 var displayCart = function() {
 	var html = "<caption>Grocery List</caption><tr><td><b>Item</b></td><td><b>Price</b></td></tr>";
 	for(var i = 0; i<groceries.length; i++) {
-		html += "<tr><td>" + groceries[i] + "</td><td>" + prices[i] + "</td></tr>";
+		html += "<tr><td>" + groceries[i] + "</td><td>" + prices[i].toFixed(2) + "</td></tr>";
 	}
 	$("grocery_table").innerHTML = html;
 };
@@ -26,7 +26,7 @@ var addGrocery = function() {
 	var newPrice = parseFloat($("price").value);
 
     groceries.push(newItem);
-    prices.push(newPrice.toFixed(2));
+    prices.push(newPrice);
 };
 
 window.onload = function() {
