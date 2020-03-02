@@ -7,22 +7,18 @@
 "use strict;"
 
 // How to reach elements by selectors using jQuery
-$("p");
-$(".headline");
-$("#color");
-$("h1, #paint_button");
-
 // Doing something with the markup elements using jQuery methods
 /* 
+$("p").text("Think colors!");
 $(".headline").text("I was here!");
 $("#color").val("1-2-3");
-$("#color").next().text("Enter a valid color name");
 */
 // The above will not work unless we wait for the page to load.
 
 $(document).ready(function() {
+    // $("p").text("Think colors!");
     // $(".headline").text("I was here!");
-    // $("#color").val("blue");
+    // $("#color").val("1-2-3");
 
     $("#paint_button").click(function() {
         var user_input = $("#color").val();
@@ -34,7 +30,7 @@ $(document).ready(function() {
     }); // End of button click()
 
     $("#color").click(function() {
-        $("#color").next().text("");
+        $("#color").next().text(" *");
     }); // End of input click
 
 }); // End of ready()
