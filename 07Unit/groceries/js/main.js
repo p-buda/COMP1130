@@ -43,6 +43,8 @@ window.onload = function() {
         linkObject = imageList[i];
         image = new Image();
         image.src = linkObject.getAttribute("href");
+        // DEBUG: Check preloading:
+        console.log(image.src);
 
         // Event handler for each link
         linkObject.onclick = function(event) {
