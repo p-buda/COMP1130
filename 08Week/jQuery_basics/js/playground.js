@@ -31,6 +31,7 @@ $(document).ready(function() {
 
     $("#color").click(function() {
         $("#color").next().text(" *");
+        $("#color").val("");
     }); // End of input click
 
 }); // End of ready()
