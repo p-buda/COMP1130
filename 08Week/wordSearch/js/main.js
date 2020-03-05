@@ -23,12 +23,12 @@ $(document).ready(function() {
     
     // Change event of the search box
     $("#keyword").change(function() {
-        console.log("change");
+        // DEBUG: console.log("change");
         // pass the value from the search box to the "contains" selector
         var keyword = $("#keyword").val();
         if(keyword !== "") {
             var textBlock = $(`td:contains(${keyword})`).text();
-            console.log(textBlock);
+            // DEBUG: console.log(textBlock);
             wordSearch(keyword, textBlock);
             $(`td:contains(${keyword})`).css("background-color", "yellow");
         }

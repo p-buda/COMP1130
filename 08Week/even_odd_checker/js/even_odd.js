@@ -11,7 +11,8 @@ $(document).ready(function() {
     $("#check_button").click(function() {
         var userNumber = $("#user_number").val();
         userNumber = parseInt(userNumber);
-        if(isNaN(userNumber) || userNumber === "") {
+        console.log(userNumber);
+        if(isNaN(userNumber)) {
             $("#user_number").next().text(" Enter a valid number");
         } else {
             if(userNumber % 2 === 0) {
