@@ -1,0 +1,26 @@
+/* Type selectors */
+body {
+    margin: 1em auto;             /* Note the syntax of the CSS rules: */
+    width: 80%;                   /* property-name: property-value(s); */
+    background-color: white;
+    padding: 1%;
+}
+
+h1, h2 {
+    color: purple;
+}
+
+tr, td {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+p {
+    padding-left: 5px;
+    border-left: 3px solid transparent;
+}
+

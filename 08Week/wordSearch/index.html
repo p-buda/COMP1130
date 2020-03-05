@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Comments:
+    index.html - the main page of my app
+    Author: SCC
+    Created: 10-14-2019
+    Edited: 3-4-2020
+    Notes:
+    -->
+    <meta charset="UTF-8">
+    <title>Word Search</title>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- External JavaScript -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <h1>Geology of Mars</h1>
+    
+    <p>
+        The geology of Mars is the scientific study of the surface, crust, and interior of the 
+        planet Mars. It emphasizes the composition, structure, history, and physical processes 
+        that shape the planet. It is analogous to the field of terrestrial geology. 
+        In planetary science, the term geology is used in its broadest sense to mean the study 
+        of the solid parts of planets and moons. The term incorporates aspects of geophysics, 
+        geochemistry, mineralogy, geodesy, and cartography.[2] A neologism, areology, from the 
+        Greek word Arēs (Mars), sometimes appears as a synonym for Mars's geology in the popular 
+        media and works of science fiction (e.g. Kim Stanley Robinson's Mars trilogy).
+    </p>
+
+    <h2>Global physiography</h2>
+
+    <p>
+        Most of our current knowledge about the geology of Mars comes from studying landforms and 
+        relief features (terrain) seen in images taken by orbiting spacecraft. Mars has a number 
+        of distinct, large-scale surface features that indicate the types of geological processes 
+        that have operated on the planet over time. This section introduces several of the larger 
+        physiographic regions of Mars. Together, these regions illustrate how geologic processes 
+        involving volcanism, tectonism, water, ice, and impacts have shaped the planet on a global 
+        scale. 
+    </p>
+    
+    <p><input type="text" id="keyword" placeholder="Keyword search..."></p>
+    <div id="results"></div>
+    <table>
+        <table class="wikitable">
+
+            <tbody><tr>
+            <th style="text-align: center; background: lavender;" colspan="2"><b>Habitability factors</b><sup id="cite_ref-Beaty_24-1" class="reference"><a href="#cite_note-Beaty-24">[24]</a></sup>
+            </th></tr>
+            <tr>
+            <td><a href="/wiki/Water_on_Mars" title="Water on Mars">Water</a></td>
+            <td><div><ul><li><a href="/wiki/Water_activity" title="Water activity">liquid water activity</a> (a<sub>w</sub>)</li><li>Past/future liquid (ice) inventories</li><li><a href="/wiki/Salinity" title="Salinity">Salinity</a>, <a href="/wiki/PH" title="PH">pH</a>, and <a href="/wiki/Reduction_potential" title="Reduction potential">Eh</a> of available water</li></ul></div>
+            </td></tr>
+            <tr>
+            <td>Chemical environment</td>
+            <td><div class="plainlist"><ul><li><b>Nutrients:</b> <div><ul><li>C, H, N, O, P, S, essential metals, essential micronutrients</li><li><a href="/wiki/Nitrogen_fixation" title="Nitrogen fixation">Fixed nitrogen</a></li><li>Availability/mineralogy</li></ul></div></li><li><b>Toxin abundances and lethality:</b> <div><ul><li><a href="/wiki/Heavy_metal_(chemistry)" class="mw-redirect" title="Heavy metal (chemistry)">Heavy metals</a> (e.g., Zn, Ni, Cu, Cr, As, Cd, etc., some essential, but toxic at high levels)</li><li>Globally distributed oxidizing soils</li></ul></div></li></ul></div>
+            </td></tr>
+            <tr>
+            <td>Energy for <a href="/wiki/Metabolism" title="Metabolism">metabolism</a></td>
+            <td><div class="plainlist"><ul><li><b>Solar</b> (surface and near-surface only)</li><li><b>Geochemical</b> (subsurface) <div><ul><li><a href="/wiki/Oxidizing_agent" title="Oxidizing agent">Oxidants</a></li><li><a href="/wiki/Reducing_agent" title="Reducing agent">Reductants</a></li><li><a href="/wiki/Redox_gradient" title="Redox gradient">Redox gradients</a></li></ul></div></li></ul></div>
+            </td></tr>
+            <tr>
+            <td>Conducive <br>physical conditions</td>
+            <td><div><ul><li>Temperature</li><li>Extreme diurnal temperature fluctuations</li><li>Low pressure (Is there a low-pressure threshold for terrestrial <a href="/wiki/Anaerobic_organism" title="Anaerobic organism">anaerobes</a>?)</li><li>Strong <a href="/wiki/Ultraviolet_germicidal_irradiation" title="Ultraviolet germicidal irradiation">ultraviolet germicidal irradiation</a></li><li><a href="/wiki/Cosmic_ray" title="Cosmic ray">Galactic cosmic radiation</a> and <a href="/wiki/Solar_proton_event" class="mw-redirect" title="Solar proton event">solar particle events</a> (long-term accumulated effects)</li><li>Solar UV-induced volatile oxidants, e.g., <a href="/wiki/Superoxide" title="Superoxide">O<sub>2</sub><sup>−</sup></a>, O<sup>−</sup>, <a href="/wiki/Hydrogen_peroxide" title="Hydrogen peroxide">H<sub>2</sub>O<sub>2</sub></a>, O<sub>3</sub></li><li>Climate/variability (geography, seasons, diurnal, and eventually, obliquity variations)</li><li>Substrate (soil processes, rock microenvironments, dust composition, shielding)</li><li>High <a href="/wiki/Carbon_dioxide" title="Carbon dioxide">CO<sub>2</sub></a> concentrations in the global atmosphere</li><li>Transport (<a href="/wiki/Aeolian_processes" title="Aeolian processes">aeolian</a>, groundwater flow, surface water, glacial)</li></ul></div>
+            </td></tr></tbody></table>
+    </table>
+    
+    <small>Source: wikipedia.org</small>
+</body>
+</html>
