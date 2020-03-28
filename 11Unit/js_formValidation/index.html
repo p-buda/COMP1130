@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Comments:
+    index.html
+    Author: SCC
+    Created: 11-06-2019
+    Edited: 3-28-2020
+    Notes:
+    -->
+    <meta charset="UTF-8">
+    <title>HTML5 form validation</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <form id="class_cancelation" name="class_cancelation" action="https://www.example.org/" method="post">
+        <div id="form_body">
+            <h1>Class Cancelation Form</h1>
+            <label for="teacher_email">Teacher email</label>
+            <input type="text" name="teacher_email" id="teacher_email"><span>*</span><br>
+            
+            <label for="teacher_name">Teacher name</label>
+            <input type="text" name="teacher_name" id="teacher_name"><span>*</span><br>
+            
+            <label for="class_name">Class name</label>
+            <input type="text" name="class_name" id="class_name" placeholder="e.g., COMP1130"><span>*</span><br>
+            
+            <label for="class_date">Class date</label>
+            <input type="date" name="class_date" id="class_date"><span>*</span><br>
+            
+            <label for="campus">Select campus</label>
+            <select name="campus" id="campus">
+                <option value="">Select one</option>
+                <option value="nmkto">North Mankato</option>
+                <option value="fbo">Faribault</option>
+            </select><span>*</span><br>
+            
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="40" rows="10" maxlength="50" placeholder="50 characters max."></textarea>
+            <div>Characters left: <span id="letter_count">50</span></div>
+            
+            <input type="submit" value="Submit" id="submit_request">
+        </div>
+    </form>
+</body>
+</html>
