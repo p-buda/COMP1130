@@ -1,19 +1,8 @@
-body {
-    /* Put the form in the middle of the window */
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
 form {
     border: 1px solid grey;
     padding: 0 20px 20px 20px;
     margin: 0 auto;
     width: 600px;
-    position: relative;
 }
 
 #form_body h1 {

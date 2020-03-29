@@ -10,9 +10,12 @@
     -->
     <meta charset="UTF-8">
     <title>HTML5 form validation</title>
+    <link rel="stylesheet" href="./plugins/jquery-ui-1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
+    <script src="./plugins/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/plugins.js"></script>
 </head>
 <body>
     <form id="class_cancelation" name="class_cancelation" action="https://www.example.org/" method="post">
@@ -28,7 +31,7 @@
             <input type="text" name="class_name" id="class_name" placeholder="e.g., COMP1130"><span>*</span><br>
             
             <label for="class_date">Class date</label>
-            <input type="date" name="class_date" id="class_date"><span>*</span><br>
+            <input type="text" name="class_date" id="class_date"><span>*</span><br>
             
             <label for="campus">Select campus</label>
             <select name="campus" id="campus">
