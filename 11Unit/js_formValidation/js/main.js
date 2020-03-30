@@ -21,6 +21,16 @@ $(document).ready(function() {
         }
         $("#teacher_email").val(teacherEmail);
 
+        /* Name validation */
+        var teacherName = $(this).find("[name=teacher_name]").val();
+        if(teacherName === "") {
+            $("#teacher_name").next().text("This field is required.");
+            isValid = false;
+        } else {
+            $("#teacher_name").next().text("");
+        }
+        $("#teacher_name").val(teacherName);
+
         /* Class name validation */
         var className = $("#class_name").val().trim();
         if(className.length !== 8) {
