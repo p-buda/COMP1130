@@ -8,7 +8,6 @@
 
 $(document).ready(function() {
     $("#class_date").datepicker({
-        minDate: new Date(),
-        showButtonPanel: true
+        minDate: new Date()
     });
 });
