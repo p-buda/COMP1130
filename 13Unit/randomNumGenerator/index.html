@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Comments:
+    index.html - the main page of my app
+    Author:
+    Created: 11-25-2019
+    Edited: 4-13-2020
+    Notes:
+    -->
+    <meta charset="UTF-8">
+    <title>Random Nums</title>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- External JavaScript -->
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Random Numbers Generator</h1>
+    </header>
+    <main>
+        <label for="user_num">Enter the number of values to generate:</label>
+        <input type="text" id="user_num"><br>
+
+        <input type="button" id="generate_button" value="Generate Random Numbers">
+
+        <div>
+            <p>The lottery numbers for <b><span id="todays_date">today</span></b> are: <span id="lottery_results"></span></p>
+            <p>You have <span id="due_date">1 week</span> to claim your prize.</p>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>
