@@ -1,0 +1,33 @@
+/* Type selectors */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 1em auto;             /* Note the syntax of the CSS rules: */
+    width: 80%;                   /* property-name: property-value(s); */
+    background-color: white;
+    padding: 1%;
+}
+
+h1, h2 {
+    color: darkmagenta;
+}
+
+#tabs {
+    height: 300px;
+}
+
+input[type="text"] {
+    margin: 5px;
+}
+
+#tabs-3 label {
+    display: inline-block;
+    width: 100px;
+}
+
+#tabs-3 span {
+    color: red;
+}
+
+#error_message {
+    color: red;
+}

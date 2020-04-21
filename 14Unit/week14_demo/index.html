@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Comments:
+    index.html - the main page of my app
+    Author:
+    Created: 12-4-2019
+    Edited: 12-4-2019
+    Notes:
+    -->
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="./libs/jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- External JavaScript -->
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous"></script>
+    <script src="./libs/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+<header>
+<h1>Demo</h1>
+</header>
+
+<form action="" id="fomr1">
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">CPU</a></li>
+        <li><a href="#tabs-2">Storage</a></li>
+        <li><a href="#tabs-3">Shipping</a></li>
+    </ul>
+
+    <div id="tabs-1">
+        <fieldset>
+            <legend>Select CPU architecture:</legend>
+            <label for="i5">Intel Core i5</label>
+            <input type="radio" name="arch" value="i5" id="i5">
+            <label for="i7">Intel Core i7</label>
+            <input type="radio" name="arch" value="i7" id="i7">
+          </fieldset>
+    </div>
+
+    <div id="tabs-2">
+        <fieldset>
+            <legend>Select storage size:</legend>
+            <label for="256m">256 MB</label>
+            <input type="radio" name="storage" value="256m" id="256m">
+            <label for="500m">500 MB</label>
+            <input type="radio" name="storage" value="500m" id="500m">
+            <label for="1g">1 GB</label>
+            <input type="radio" name="storage" value="1g" id="1g">
+        </fieldset>
+    </div>
+
+    <div id="tabs-3">
+        <fieldset>
+            <legend>Provide shipping information:</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="First Last"><span> *</span><br>
+            <label for="address">Address: </label>
+            <input type="text" name="address" id="address" value="1920 Lee Blvd."><span> *</span><br>
+            <label for="city">City: </label>
+            <input type="text" name="city" id="city" value="Mankato"><span> *</span><br>
+            <label for="state">State: </label>
+            <input type="text" name="state" id="state" placeholder="MN"><span> *</span><br>
+            <label for="zip">ZIP: </label>
+            <input type="text" name="zip" id="zip" placeholder="56003"><span> *</span><br>
+        </fieldset>
+    </div>
+
+</div>
+    <div><p>Total: $<span id="total"></span></p></div>
+    <input class="ui-button ui-widget ui-corner-all" type="submit" value="Submit" id="submit_order">
+</form>
+</body>
+</html>
